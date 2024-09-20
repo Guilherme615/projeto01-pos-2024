@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+{% block title %} {{ data['vinculo']['nome'] }} {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="user-infos text-center">
+            <img src="{{ data['url_foto_150x200'] }}" class="user-photo" alt="foto" />
+            <h2 class="user-name">{{ data['vinculo']['nome'] }}</h2>
+        </div>
+
+        <div class="user-options text-center">
+            <a href="{{ url_for('boletim') }}" class="btn btn-primary">Ver boletim</a>
+        </div>
+    </div>
+{% endblock %}
