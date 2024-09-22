@@ -1,23 +1,24 @@
 /* Estilos globais */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9; /* cor de fundo mais suave */
+    background-color: #2e2e2e; /* Cinza escuro */
+    color: #d3d3d3; /* Cor de texto mais clara para contraste */
     margin: 0;
     padding: 0;
 }
 
 h1, h2 {
     text-align: center;
-    color: #333;
+    color: #d3d3d3; /* Texto claro para contrastar com o fundo escuro */
 }
 
 .container {
     width: 80%;
     margin: 30px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* cantos arredondados */
+    background-color: #3a3a3a; /* Fundo um pouco mais claro que o body */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 /* Estilo para a foto do usuário */
@@ -26,91 +27,40 @@ h1, h2 {
     max-width: 150px;
     margin: 20px auto;
     border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo da tabela */
-table {
-    width: 100%; /* largura completa da container */
-    margin: 20px 0;
-    border-collapse: collapse;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* sombra suave */
+/* Estilo para o nome do usuário */
+.user-name {
+    color: #4caf50; /* Verde escuro para o nome */
+    font-size: 24px;
+    margin-top: 10px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+/* Botão personalizado */
+.btn-primary {
+    background-color: #4caf50; /* Verde escuro */
+    border-color: #388e3c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #f0f0f0;
-    border-bottom: 2px solid #ddd;
-    font-weight: bold;
-    color: #333;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-tr:hover {
-    background-color: #e0e0e0; /* destaque para hover */
+.btn-primary:hover {
+    background-color: #388e3c; /* Verde escuro mais forte no hover */
 }
 
 /* Estilo dos links */
 a {
-    color: #007bff; /* azul Bootstrap */
-    text-decoration: underline;
+    color: #4caf50; /* Verde escuro */
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #0056b3; /* escurecimento no hover */
-}
-
-a.logout {
-    color: red;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* Estilos de formulário (para boletim) */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-}
-
-form label {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-form input, form button {
-    margin: 5px;
-    padding: 10px;
-    width: 100%;
-    max-width: 300px; /* tamanho máximo */
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #0056b3;
+    color: #388e3c; /* Escurecimento do verde */
 }
 
 /* Responsividade */
@@ -118,12 +68,42 @@ form button:hover {
     .container {
         width: 90%;
     }
+}
 
-    table {
-        font-size: 14px;
-    }
+/* Estilo da tabela */
+table {
+    width: 100%; /* largura completa da container */
+    margin: 20px 0;
+    border-collapse: collapse;
+    background-color: #3a3a3a; /* Fundo cinza escuro uniforme */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
 
-    form input, form button {
-        width: 90%;
-    }
+table, th, td {
+    border: 1px solid #555; /* Borda sutil */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    color: #d3d3d3; /* Texto claro */
+}
+
+th {
+    background-color: #4caf50; /* Verde escuro para o cabeçalho */
+    font-weight: bold;
+    color: #fff; /* Texto branco no cabeçalho */
+}
+
+tr {
+    background-color: #3a3a3a; /* Cor uniforme para todas as linhas */
+}
+
+tr:hover {
+    background-color: #4caf50; /* Destaque no hover */
+}
+
+/* Removendo o estilo de alternância de cores */
+tr:nth-child(even), tr:nth-child(odd) {
+    background-color: #3a3a3a; /* Todas as linhas com a mesma cor */
 }
